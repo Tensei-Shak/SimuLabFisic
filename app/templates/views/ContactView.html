@@ -1,0 +1,19 @@
+{% extends "./layout.html" %}
+
+{% block MainContent %}
+<div class="container ">
+    <form method="post">
+        <h2>Contact us</h2>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" >Enviar</button>
+    </form>
+    
+</div>
+{% endblock %}

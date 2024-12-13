@@ -1,0 +1,40 @@
+{% extends "./layout.html" %}
+
+{% block MainContent %}
+<div class="container">
+    <h1>Team Members</h1>
+    
+    <!-- Formulario principal para ingresar el número de miembros -->
+    <form method="POST" action="/report/">
+        <label for="numberMembers">Number Members:</label>
+        <input type="number" id="numberMembers" name="numberMembers" min="1" max="6" required><br><br>
+        <button type="submit">Refresh</button>
+    </form>
+
+    <br>
+
+    {% if contador is not none %}
+        <form method="POST" action="/report/submit_team">
+            {% for i in range(contador) %}
+                <div class="card mb-3">
+                    <div>
+                        <label for="name_member{{ i }}">Member #{{ i+1 }}</label>
+                        <input type="text" name="name_member{{ i }}" id="name_member{{ i }}" required>
+                    </div>
+                    <div>
+                        <label for="id_license{{ i }}">ID #{{ i+1 }}</label>
+                        <input type="number" name="id_license{{ i }}" id="id_license{{ i }}" required>
+                    </div>
+                    <div>
+                        <label for="email_corp{{ i }}">Email #{{ i+1 }}</label>
+                        <input type="email" name="email_corp{{ i }}" id="email_corp{{ i }}" required>
+                    </div>
+                </div>
+            {% endfor %}
+            <label for="text_analysis" class="form-label">Text Analysis</label>
+            <textarea class="form-control" id="text_analysis" name="text_analysis" rows="3"></textarea>
+            <button type="submit">Submit Team</button>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}
