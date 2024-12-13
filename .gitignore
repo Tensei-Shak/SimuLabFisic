@@ -1,0 +1,54 @@
+# Entornos virtuales
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de distribución / empaquetado
+dist/
+build/
+*.egg-info/
+
+# Entornos de desarrollo
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos de logs
+*.log
+
+# Archivos de base de datos
+*.sqlite3
+
+# Variables de entorno
+.env
+.flaskenv
+
+# Archivos generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias de Flask
+instance/
+.webassets-cache
+
+# Archivos de configuración local
+config.local.py
+
+# Archivos de compilación
+*.pyc
+*.pyo
+*.pyd
+
+# Directorios de dependencias
+node_modules/
+
+# Archivos de backup
+*.bak
